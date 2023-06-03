@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landing page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #header {
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+      .container-flex {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.6rem 1.4rem;
+      }
+      .nav-left {
+        display: flex;
+        align-items: center;
+      }
+      .call-btn {
+        font-size: 1.2rem;
+        margin-right: 1.8rem;
+      }
+      .tell {
+        border: 1px solid black;
+        padding: 0.2rem;
+      }
+      .tell,
+      .apply-btn {
+        cursor: pointer;
+      }
+      .apply-btn {
+        border: none;
+        outline: none;
+        font-size: large;
+        text-transform: capitalize;
+        background-color: rgb(204, 204, 48);
+        padding: 0.4rem;
+        border-radius: 0.4rem;
+        display: block;
+      }
+      .apply-btn:hover {
+        background-color: rgb(213, 233, 35);
+        transition: 0.2s all ease-in-out;
+      }
+
+      .nav {
+        background-color: rgb(97, 97, 197);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        height: 9vh;
+        z-index: 11;
+        padding: 0 0.5rem;
+      }
+      .menu-items {
+        list-style-type: none;
+        display: flex;
+      }
+      .nav ul li {
+        padding: 10px;
+        text-transform: capitalize;
+        font-size: larger;
+        color: white;
+      }
+      .search {
+        display: block;
+        border: none;
+        outline: none;
+        background-color: rgba(221, 221, 233, 0.4);
+        color: white;
+        padding: 1rem;
+        margin-right: auto;
+        border-radius: 10px;
+        font-size: 1rem;
+      }
+      .nav ::placeholder {
+        color: white;
+      }
+      .nav a {
+        text-decoration: none;
+        color: white;
+      }
+      .nav a:hover {
+        color: yellowgreen;
+      }
+
+      .point {
+        position: relative;
+        height: 50vh;
+        background-image: url("background.jpg");
+        color: white;
+        background-size: cover;
+        background-position: center;
+        text-transform: capitalize;
+      }
+      .point-para {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+      .student-photo {
+        width: 40vw;
+        height: 40vh;
+      }
+      .image-container {
+        position: absolute;
+        right: 0;
+        top: 1rem;
+      }
+      .point button {
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 1rem;
+        background-color: orange;
+        color: white;
+        font-size: 15px;
+        text-transform: capitalize;
+        cursor: pointer;
+        border: none;
+      }
+
+      .container {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .flex-item {
+        padding: 20px;
+        width: 40vw;
+        font-size: large;
+        text-align: center;
+        margin: 1rem;
+        cursor: pointer;
+      }
+
+      .heading {
+        text-align: center;
+        margin-top: 4rem;
+      }
+
+      /* media queries */
+      @media screen and (max-width: 720px) {
+        .nav-left {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
+        .call-btn {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+        #header {
+          font-size: 0.8rem;
+        }
+
+        .hambuger,
+        .close-menu {
+          position: relative;
+          z-index: 4;
+          width: 40px;
+          height: 40px;
+          fill: white;
+          cursor: pointer;
+        }
+        .close-menu {
+          display: none;
+        }
+
+        .menu-items {
+          position: fixed;
+          left: 0;
+          top: 0;
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          width: 100vw;
+          z-index: 2;
+          background-color: black;
+        }
+        .nav li:hover {
+          color: wheat;
+          padding-right: 0.4rem;
+          transition: all 0.4s ease-in-out;
+        }
+        /* class to open menu */
+        .open-menu {
+          display: flex;
+        }
+      }
+
+      .hide {
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+
+      footer {
+        height: 20vh;
+        background-color: rgb(97, 97, 197);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div class="container-flex">
+      <div id="header">
+        <h2>daux academic bridge</h2>
+      </div>
+      <div class="nav-left">
+        <p class="call-btn">call: <span class="tell"> 0624454589</span></p>
+        <button class="apply-btn">apply now</button>
+      </div>
+    </div>
+    <div class="nav">
+      <ul class="menu-items" id="menu">
+        <li><a href="####">home</a></li>
+        <li><a href="####">about</a></li>
+        <li><a href="####">courses</a></li>
+        <li><a href="####">staff</a></li>
+        <li><a href="####">blog</a></li>
+        <li><a href="####">contact</a></li>
+      </ul>
+      <input
+        class="search"
+        type="search"
+        name="search"
+        placeholder="Search here..."
+      />
+
+      <div id="menuicons" className="iconscontainer">
+        <svg
+          class="hambuger"
+          id="open-menu"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+        <svg
+          class="close-menu"
+          id="close-menu"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        >
+          <path
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="point">
+      <div class="point-para">
+        <h1>knowledge and wisdom</h1>
+        <h1>Education</h1>
+        <button class="contact-btn">contact us</button>
+      </div>
+      <div class="image-container">
+        <img class="student-photo" src="girl.png" alt="student" />
+      </div>
+    </div>
+    <h1 class="heading">OUR SERVICES</h1>
+    <div class="container">
+      <div class="flex-item" style="background-color: orange">
+        <h3>Certified Teachers</h3>
+        <p>
+          Get your chance of being taught by certified teachers who are expert
+          in this field for a long time
+        </p>
+      </div>
+      <div class="flex-item" style="background-color: blueviolet">
+        <h3>Special Education</h3>
+        <p>
+          Get that education that is aim to equip you with understanding of
+          knowledge and its application
+        </p>
+      </div>
+      <div class="flex-item" style="background-color: orange">
+        <h3>Books & Library</h3>
+        <p>
+          Get access to different books that will drive your passion into diving
+          into more knowledge
+        </p>
+      </div>
+      <div class="flex-item" style="background-color: blueviolet">
+        <h3>Sports Clubs</h3>
+        <p>
+          Don't forget building your physical and mental health with different
+          kinds of sport
+        </p>
+      </div>
+    </div>
+    <footer>
+      <h3>&#169; copyright 2023</h3>
+    </footer>
+    <script>
+      // to test if javascript is working.
+      console.log("hello i am amos, a frontend developer!");
+
+      // javascript codes to open and close navigation bar.
+      // first select html elements and store in constants
+      const hambuger = document.getElementById("open-menu");
+      const closeMenu = document.getElementById("close-menu");
+      const menuicons = document.getElementById("menuicons");
+      const menu = document.getElementById("menu");
+
+      // you can check it on console.
+      console.log(hambuger);
+
+      const menuHandler = () => {
+        // add class in ul element to open menu navigation
+        menu.classList.toggle("open-menu");
+        // change hambuger to cross icon
+        hambuger.classList.toggle("hide");
+        closeMenu.classList.toggle("show");
+      };
+
+      // add event listner
+      menuicons.addEventListener("click", menuHandler);
+    </script>
+  </body>
+</html>
